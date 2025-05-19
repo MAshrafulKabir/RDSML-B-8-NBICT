@@ -34,3 +34,18 @@ Stu_data = data.frame(student_names, study_hours, marks, Male)
 summary(Stu_data)
 
 mean(Stu_data$study_hours)
+
+# Matrix in R
+study_hours = c(89, 79, 45, 75, 63, 54, 23, 25, 57, 46)
+subject_marks = c(79, 53, 71, 57, 63, 54, 74, 77, 61, 69)
+passing_grade = c(5, 4.5, 4.7, 4.8, 4.9, 5, 5, 4.4, 4.1, 5)
+
+# Joining to columns in a matrix
+student_status = c(study_hours, subject_marks, passing_grade)
+student_matrix = matrix(student_status, byrow = FALSE, nrow = 10)
+student_matrix
+# Naming rows and columns
+colnames(student_matrix) = c('Hours', 'Marks', 'Grades')
+student_matrix
+rownames(student_matrix) = c(1:10)
+student_matrix
