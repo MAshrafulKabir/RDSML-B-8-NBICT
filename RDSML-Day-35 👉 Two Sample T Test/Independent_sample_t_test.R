@@ -12,12 +12,16 @@ var.test(x = dataset$Male, y = dataset$Female)
 # Running the independent sample T test
 t.test(x = dataset$Male, y = dataset$Female, var.equal = TRUE)
 
-# Basic barplot
+# Basic bar plot
 library(ggplot2)
 ggplot(data = dataset, aes(x = dataset$Male, y = dataset$Female)) +
-  geom_bar(stat = "identity", fill = "steelblue") + theme_minimal()
-
-
-
-
+  geom_bar(stat = "identity")
+             geom_bar(stat = "identity") +
+             theme_minimal() +
+           p + scale_fill_manual(values = c("blue", "red", "green"))+
+           
+           p + scale_fill_brewer(palettes = "Dark2")+
+           
+           p + scale_fill_grey()
+           
 
